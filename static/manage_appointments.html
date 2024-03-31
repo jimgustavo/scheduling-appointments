@@ -1,0 +1,73 @@
+<!-- static/manage_appointments.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+    
+    <h1>Schedule you Appointment</h1>
+
+    <div id="confimationDiv" class="confimationDiv"></div>
+
+    <div id="table-container" class="table-container">
+        <div class="selector-container">
+            <h1>Appointments Management</h1>
+            <label for="weekSelector">Select Week:</label>
+            <select id="weekSelector" name="weekSelector">
+            <!-- Dynamically generated options will be added here -->
+        </select>
+        </div>
+        <table class="table-form">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                </tr>
+            </thead>
+            <tbody id="schedule-body">
+            </tbody>
+        </table>
+    </div>
+    <!--  Appointments will be displayed here -->
+    <div id="appointments-list" class="appointments-list"></div>
+     <!--  Form to Update Appointment -->
+     <form id="update-form" class="update-form" style="display: none;">
+        <input type="hidden" id="update-appointment-id">
+        <label for="update-full-name">Full Name:</label>
+        <input type="text" id="update-full-name" required>
+        <label for="update-email">Email:</label>
+        <input type="email" id="update-email" required>
+        <label for="update-phone-number">Phone Number:</label>
+        <input type="tel" id="update-phone-number" required>
+        <label for="update-vehicle-make">Vehicle Make:</label>
+        <input type="text" id="update-vehicle-make" required>
+        <label for="update-vehicle-model">Vehicle Model:</label>
+        <input type="text" id="update-vehicle-model" required>
+        <label for="update-vehicle-year">Vehicle Year:</label>
+        <input type="number" id="update-vehicle-year" required>
+        <label for="update-service-type">Service Type:</label>
+        <input type="text" id="update-service-type" required>
+        <label for="update-preferred-date">Preferred Date:</label>
+        <input type="date" id="update-preferred-date" required>
+        <label for="update-preferred-time">Preferred Time:</label>
+        <input type="time" id="update-preferred-time" required>
+        <label for="update-additional-notes">Additional Notes:</label>
+        <textarea id="update-additional-notes"></textarea>
+        <label for="update-appointment-state">Appointment State:</label>
+        <input type="text" id="update-appointment-state" required>
+        <button type="submit">Update</button>
+    </form>
+    <script src="manage_appointments.js"></script>
+</body>
+</html>
+
